@@ -20,6 +20,7 @@ val `akka-sample-cluster-java` = project
       "com.typesafe.akka" %% "akka-cluster-metrics" % akkaVersion,
       "com.typesafe.akka" %% "akka-cluster-tools" % akkaVersion,
       "com.typesafe.akka" %% "akka-multi-node-testkit" % akkaVersion,
+      "com.lightbend.akka" %% "akka-management-cluster-http" % "0.3",
       "org.scalatest" %% "scalatest" % "3.0.1" % Test,
       "io.kamon" % "sigar-loader" % "1.6.6-rev002"),
     fork in run := true,

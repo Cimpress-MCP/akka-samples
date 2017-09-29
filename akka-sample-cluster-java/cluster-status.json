@@ -1,0 +1,27 @@
+{
+  "selfNode": "akka.tcp://ClusterSystem@127.0.0.1:2551",
+  "leader": "akka.tcp://ClusterSystem@127.0.0.1:2551",
+  "oldest": "akka.tcp://ClusterSystem@127.0.0.1:2551",
+  "unreachable": [
+    {
+      "node": "akka.tcp://ClusterSystem@127.0.0.1:2552",
+      "observedBy": [
+        "akka.tcp://ClusterSystem@127.0.0.1:2551"
+      ]
+    }
+  ],
+  "members": [
+    {
+      "node": "akka.tcp://ClusterSystem@127.0.0.1:2551",
+      "nodeUid": "1952225788",
+      "status": "Up",
+      "roles": []
+    },
+    {
+      "node": "akka.tcp://ClusterSystem@127.0.0.1:2552",
+      "nodeUid": "-1309925996",
+      "status": "Leaving",
+      "roles": []
+    }
+  ]
+}

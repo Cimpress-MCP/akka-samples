@@ -1,10 +1,12 @@
 package sample.cluster.simple;
 
-import akka.actor.ActorSystem;
-import akka.actor.Props;
-
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
+
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+import akka.cluster.Cluster;
+import akka.cluster.http.management.ClusterHttpManagement;
 
 public class SimpleClusterApp {
 
@@ -28,6 +30,11 @@ public class SimpleClusterApp {
       // Create an actor that handles cluster domain events
       system.actorOf(Props.create(SimpleClusterListener.class),
           "clusterListener");
+
+      final Cluster cluster = Cluster.get(system);
+
+      final ClusterHttpManagement mgr = ClusterHttpManagement.create(cluster);
+      mgr.start();
 
     }
   }
